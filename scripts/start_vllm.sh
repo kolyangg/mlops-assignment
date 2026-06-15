@@ -5,9 +5,21 @@
 
 set -euo pipefail
 
-MODEL="Qwen/Qwen3-30B-A3B-Instruct-2507"
+if [[ -f .env ]]; then
+    set -a
+    source .env
+    set +a
+fi
+
+MODEL="${VLLM_MODEL:-Qwen/Qwen3-30B-A3B-Instruct-2507}"
+MAX_MODEL_LEN="${VLLM_MAX_MODEL_LEN:-4096}"
+GPU_MEMORY_UTILIZATION="${VLLM_GPU_MEMORY_UTILIZATION:-0.90}"
 
 exec uv run python -m vllm.entrypoints.openai.api_server \
     --model "$MODEL" \
     --host 0.0.0.0 \
-    --port 8000
+    --port 8000 \
+    --dtype bfloat16 \
+    --max-model-len "$MAX_MODEL_LEN" \
+    --gpu-memory-utilization "$GPU_MEMORY_UTILIZATION" \
+    --enable-prefix-caching
