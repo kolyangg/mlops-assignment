@@ -13,7 +13,7 @@ from typing import Any
 
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 load_dotenv()
 
@@ -23,10 +23,13 @@ from agent.graph import AgentState, graph  # noqa: E402
 # are NOT swallowed - a misconfigured Langfuse should not silently
 # produce zero traces.
 _lf_handler: Any = None
+_lf_client: Any = None
 if os.environ.get("LANGFUSE_PUBLIC_KEY") and os.environ.get("LANGFUSE_SECRET_KEY"):
+    from langfuse import get_client
     from langfuse.langchain import CallbackHandler
 
     _lf_handler = CallbackHandler()
+    _lf_client = get_client()
 
 
 app = FastAPI()
@@ -35,7 +38,7 @@ app = FastAPI()
 class AnswerRequest(BaseModel):
     question: str
     db: str
-    tags: dict[str, str] = {}
+    tags: dict[str, str] = Field(default_factory=dict)
 
 
 class AnswerResponse(BaseModel):
@@ -55,12 +58,27 @@ def health() -> dict[str, str]:
 @app.post("/answer", response_model=AnswerResponse)
 def answer(req: AnswerRequest) -> AnswerResponse:
     state = AgentState(question=req.question, db_id=req.db)
+    metadata = {
+        "phase": "phase4",
+        "db": req.db,
+        "question": req.question,
+        **req.tags,
+    }
+    tags = [
+        "phase:4",
+        f"db:{req.db}",
+        *(f"{k}:{v}" for k, v in sorted(req.tags.items())),
+    ]
     config: dict[str, Any] = {
         "callbacks": [_lf_handler] if _lf_handler is not None else [],
-        "metadata": req.tags,
+        "metadata": metadata,
+        "run_name": "text_to_sql_agent",
+        "tags": tags,
     }
     try:
         final = graph.invoke(state, config=config)
+        if _lf_client is not None:
+            _lf_client.flush()
     except Exception as e:  # noqa: BLE001
         raise HTTPException(status_code=500, detail=f"{type(e).__name__}: {e}")
 
@@ -68,6 +86,8 @@ def answer(req: AnswerRequest) -> AnswerResponse:
     iteration = final.get("iteration", 0)
     history = final.get("history", [])
     execution = final.get("execution")
+    verify_ok = final.get("verify_ok", False)
+    verify_issue = final.get("verify_issue", "")
 
     if execution is None:
         return AnswerResponse(
@@ -85,6 +105,15 @@ def answer(req: AnswerRequest) -> AnswerResponse:
             iterations=iteration,
             ok=False,
             error=execution.error,
+            history=history,
+        )
+    if not verify_ok:
+        return AnswerResponse(
+            sql=sql,
+            rows=[list(r) for r in (execution.rows or [])],
+            iterations=iteration,
+            ok=False,
+            error=verify_issue or "verifier rejected the final SQL result",
             history=history,
         )
 

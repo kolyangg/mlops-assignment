@@ -17,6 +17,7 @@ conditional router following the same shape.
 from __future__ import annotations
 
 import os
+import json
 import re
 from dataclasses import dataclass, field
 from typing import Any
@@ -77,8 +78,24 @@ def _extract_sql(text: str) -> str:
     Intentionally simple: take the first ```sql ... ``` block if there is one,
     otherwise the whole reply. You may need to harden this for your prompts.
     """
+    text = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL | re.IGNORECASE)
     fenced = re.search(r"```(?:sql)?\s*(.*?)```", text, re.DOTALL | re.IGNORECASE)
-    return (fenced.group(1) if fenced else text).strip()
+    sql = (fenced.group(1) if fenced else text).strip()
+    stmt = re.search(r"\b(with|select)\b.*", sql, re.DOTALL | re.IGNORECASE)
+    if stmt:
+        sql = stmt.group(0).strip()
+    return sql.rstrip("` \n")
+
+
+def _extract_json_object(text: str) -> dict[str, Any]:
+    """Parse a small JSON object from model output."""
+    text = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL | re.IGNORECASE)
+    fenced = re.search(r"```(?:json)?\s*(.*?)```", text, re.DOTALL | re.IGNORECASE)
+    candidate = fenced.group(1) if fenced else text
+    match = re.search(r"\{.*\}", candidate, re.DOTALL)
+    if match:
+        candidate = match.group(0)
+    return json.loads(candidate)
 
 
 def generate_sql_node(state: AgentState) -> dict:
@@ -124,7 +141,41 @@ def verify_node(state: AgentState) -> dict:
     What counts as "not plausible" is yours to define - see the Phase 3 targets
     in the README.
     """
-    raise NotImplementedError("Implement in Phase 3")
+    if state.execution is None:
+        issue = "SQL was not executed."
+        return {
+            "verify_ok": False,
+            "verify_issue": issue,
+            "history": state.history + [{"node": "verify", "ok": False, "issue": issue}],
+        }
+
+    response = llm().invoke([
+        ("system", prompts.VERIFY_SYSTEM),
+        ("user", prompts.VERIFY_USER.format(
+            schema=state.schema,
+            question=state.question,
+            sql=state.sql,
+            execution=state.execution.render(),
+        )),
+    ])
+    try:
+        parsed = _extract_json_object(str(response.content))
+        ok = bool(parsed.get("ok", False))
+        issue = str(parsed.get("issue", "")).strip()
+    except Exception as e:  # noqa: BLE001
+        ok = False
+        issue = f"Verifier returned invalid JSON: {type(e).__name__}: {response.content}"
+
+    if not ok and not issue:
+        issue = "Execution result does not plausibly answer the question."
+    if ok:
+        issue = ""
+
+    return {
+        "verify_ok": ok,
+        "verify_issue": issue,
+        "history": state.history + [{"node": "verify", "ok": ok, "issue": issue}],
+    }
 
 
 def revise_node(state: AgentState) -> dict:
@@ -137,7 +188,27 @@ def revise_node(state: AgentState) -> dict:
 
     Return: {"sql": <str>, "iteration": state.iteration + 1, ...}.
     """
-    raise NotImplementedError("Implement in Phase 3")
+    execution = state.execution.render() if state.execution is not None else "SQL was not executed."
+    response = llm().invoke([
+        ("system", prompts.REVISE_SYSTEM),
+        ("user", prompts.REVISE_USER.format(
+            schema=state.schema,
+            question=state.question,
+            sql=state.sql,
+            execution=execution,
+            issue=state.verify_issue,
+        )),
+    ])
+    sql = _extract_sql(str(response.content))
+    return {
+        "sql": sql,
+        "iteration": state.iteration + 1,
+        "history": state.history + [{
+            "node": "revise",
+            "issue": state.verify_issue,
+            "sql": sql,
+        }],
+    }
 
 
 def route_after_verify(state: AgentState) -> str:
@@ -146,7 +217,9 @@ def route_after_verify(state: AgentState) -> str:
     Two reasons to end: the verifier was happy (state.verify_ok), or you've hit
     the iteration cap (state.iteration >= MAX_ITERATIONS). Otherwise, revise.
     """
-    raise NotImplementedError("Implement in Phase 3")
+    if state.verify_ok or state.iteration >= MAX_ITERATIONS:
+        return "end"
+    return "revise"
 
 
 # ---- Graph wiring -----------------------------------------------------

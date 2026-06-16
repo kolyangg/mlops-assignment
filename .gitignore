@@ -17,6 +17,7 @@ data/bird/
 results/*.json
 screenshots/*.png
 screenshots/*.jpg
+logs/
 
 # HF cache (if anyone runs locally)
 .cache/
