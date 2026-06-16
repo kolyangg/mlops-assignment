@@ -17,6 +17,7 @@ import asyncio
 import json
 import random
 import time
+from typing import Any
 from pathlib import Path
 
 import aiohttp
@@ -38,12 +39,18 @@ async def fire_one(
     t0 = time.monotonic()
     status = "ok"
     err: str | None = None
+    response_body: dict[str, Any] | None = None
     try:
         async with session.post(url, json=payload, timeout=aiohttp.ClientTimeout(total=120)) as resp:
-            await resp.read()
+            body = await resp.text()
+            if body:
+                try:
+                    response_body = json.loads(body)
+                except json.JSONDecodeError:
+                    response_body = {"raw": body[:500]}
             if resp.status != 200:
                 status = "http_error"
-                err = f"HTTP {resp.status}"
+                err = f"HTTP {resp.status}: {body[:300]}"
     except asyncio.TimeoutError:
         status = "timeout"
     except Exception as e:  # noqa: BLE001
@@ -53,6 +60,8 @@ async def fire_one(
         "latency_seconds": time.monotonic() - t0,
         "status": status,
         "error": err,
+        "agent_ok": response_body.get("ok") if response_body else None,
+        "iterations": response_body.get("iterations") if response_body else None,
     })
 
 
@@ -112,6 +121,10 @@ async def drive(args: argparse.Namespace) -> None:
         "latency_p95": pct(0.95),
         "latency_p99": pct(0.99),
         "latency_max": latencies[-1] if latencies else float("nan"),
+        "avg_iterations": (
+            sum(r["iterations"] for r in results if isinstance(r.get("iterations"), int))
+            / max(1, sum(1 for r in results if isinstance(r.get("iterations"), int)))
+        ),
     }
 
     args.out.parent.mkdir(parents=True, exist_ok=True)

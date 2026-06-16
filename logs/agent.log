@@ -1,386 +1,42 @@
-INFO:     Started server process [1203256]
+INFO:     Started server process [1304623]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
-INFO:     127.0.0.1:45676 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:42380 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:42380 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:42380 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:42380 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:42380 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:42380 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:42380 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:42380 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:42380 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:42380 - "POST /answer HTTP/1.1" 200 OK
-INFO:     Started server process [1206404]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
-INFO:     127.0.0.1:49408 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:39910 - "POST /answer HTTP/1.1" 200 OK
-INFO:     176.65.149.236:62551 - "GET / HTTP/1.1" 404 Not Found
-INFO:     127.0.0.1:44632 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:44646 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:37268 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40026 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59804 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59810 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59812 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59816 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40960 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40972 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40980 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40996 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:41002 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:41006 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:41018 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:41028 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:41040 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:41044 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:41050 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:35982 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:35986 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:35998 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:36012 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:36024 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:36028 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:36034 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:36048 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:36060 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:36076 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:36078 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55866 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55880 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55886 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55896 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57448 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57450 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57458 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57470 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57484 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57500 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:48246 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:48258 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:48272 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:48280 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:48296 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:48312 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:48324 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:48328 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:48344 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:48360 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:48366 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:48372 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:48378 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50744 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50752 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50754 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50766 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50774 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50776 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50780 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50784 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50792 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46420 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46432 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:43554 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46718 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46718 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46742 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46784 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46772 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46784 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46754 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46754 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46742 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46756 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46734 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46772 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46800 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46784 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46800 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46826 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46784 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46852 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46742 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46726 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46840 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46874 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46756 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46772 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46756 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46754 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46718 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46898 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46734 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46840 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46726 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46884 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46874 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46860 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46840 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46742 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46756 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46826 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46784 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46898 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46874 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46718 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46726 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46754 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46754 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46754 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46800 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46840 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46884 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46790 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46810 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46784 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46884 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46810 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46854 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46874 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46756 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46800 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46726 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46880 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46718 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46906 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46754 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46810 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46898 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59088 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46734 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46906 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46718 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46800 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46772 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46726 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46914 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46852 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46754 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59072 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46898 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46826 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46920 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46906 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46800 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46826 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:59112 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59088 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59116 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59116 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46756 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46898 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59102 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46734 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46854 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59090 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46726 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46734 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46790 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46914 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46754 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46784 - "POST /answer HTTP/1.1" 200 OK
-Propagated attribute 'metadata.question' value is over 200 characters (286 chars). Dropping value.
-INFO:     127.0.0.1:59104 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46772 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46840 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46884 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59072 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46784 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46800 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59116 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46860 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46890 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46734 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46756 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46854 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46826 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59088 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46906 - "POST /answer HTTP/1.1" 200 OK
-Propagated attribute 'metadata.question' value is over 200 characters (215 chars). Dropping value.
-INFO:     127.0.0.1:46890 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46920 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46734 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46718 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46772 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59090 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46810 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59104 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46874 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46784 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46754 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59072 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46756 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46840 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46914 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46800 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46884 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59090 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46756 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:59088 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46874 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46880 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46906 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59088 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46890 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46826 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46734 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46860 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46756 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59072 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59130 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46906 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59112 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59104 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46920 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46852 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46914 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46718 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46754 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46890 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46874 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46718 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46754 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46756 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59090 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46734 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46884 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59116 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46860 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46800 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46914 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46920 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46800 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46756 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46906 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46790 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46840 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46874 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46742 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59104 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59090 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46810 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46880 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46854 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46754 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46734 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46800 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46734 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46898 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56852 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46810 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46854 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46840 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46790 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46920 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59090 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46920 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:56868 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46906 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46898 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59112 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46874 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46742 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56852 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46826 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46772 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46914 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57002 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46852 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59088 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59130 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46754 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56880 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56862 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46890 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46854 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46790 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56974 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46860 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56928 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56982 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46920 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56868 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56920 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59102 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59128 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46906 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59116 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56938 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46718 - "POST /answer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60248 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51324 - "POST /answer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51338 - "POST /answer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51340 - "POST /answer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51346 - "POST /answer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51352 - "POST /answer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51354 - "POST /answer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51360 - "POST /answer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51370 - "POST /answer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51374 - "POST /answer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51386 - "POST /answer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51400 - "POST /answer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51412 - "POST /answer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43770 - "POST /answer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43778 - "POST /answer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43784 - "POST /answer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43800 - "POST /answer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43806 - "POST /answer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43818 - "POST /answer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43822 - "POST /answer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43836 - "POST /answer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43840 - "POST /answer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43854 - "POST /answer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43862 - "POST /answer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43876 - "POST /answer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43884 - "POST /answer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43886 - "POST /answer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56906 - "POST /answer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56918 - "POST /answer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56934 - "POST /answer HTTP/1.1" 200 OK
 INFO:     127.0.0.1:56944 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59120 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56968 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46726 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56974 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:59072 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46884 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46772 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59104 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46880 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59102 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:56996 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46826 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46718 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:57016 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46800 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56968 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46884 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46840 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46854 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56954 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46756 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59130 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46754 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46898 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59116 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56868 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56944 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56938 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46890 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46790 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59120 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46726 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56904 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59088 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56928 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59072 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56914 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59102 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46860 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59090 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46914 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46810 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57598 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56852 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57596 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57638 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46852 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57680 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57608 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56982 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56974 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57644 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56920 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57658 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57002 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57646 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46772 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46906 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46920 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56880 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59128 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57606 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57624 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46880 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57696 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56952 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57674 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59104 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56888 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:46742 - "POST /answer HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59112 - "POST /answer HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:56862 - "POST /answer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39894 - "GET /health HTTP/1.1" 200 OK
+INFO:     160.119.71.12:35806 - "POST / HTTP/1.1" 404 Not Found
+INFO:     160.119.71.12:38512 - "POST /_next HTTP/1.1" 404 Not Found
+INFO:     160.119.71.12:38518 - "POST /api HTTP/1.1" 404 Not Found
+INFO:     160.119.71.12:38532 - "POST /_next/server HTTP/1.1" 404 Not Found
+INFO:     160.119.71.12:38546 - "POST /app HTTP/1.1" 404 Not Found
+INFO:     160.119.71.12:38556 - "POST /api/route HTTP/1.1" 404 Not Found

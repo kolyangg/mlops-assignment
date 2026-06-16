@@ -68,3 +68,38 @@ Per-iteration accuracy:
 Latency from the eval runner: p50 0.56s, p95 2.05s, p99 2.92s.
 
 Read: the current verify/revise loop triggers on several questions, but it did not improve execution accuracy on this baseline run. The verifier catches obvious empty/null failures, but the reviser often repeats the same SQL instead of making a semantically useful correction.
+
+## Phase 6: load/SLO iteration
+
+Target SLO: p95 end-to-end agent latency under 5s at 10+ RPS over 5 minutes.
+
+Initial 10 RPS shakeout, 30s:
+
+- Requested 10 RPS, 300 requests.
+- Achieved 3.33 RPS including drain.
+- p95 latency 12.81s.
+- 257 OK, 40 HTTP 500, 3 client errors.
+
+Iteration log:
+
+- Saw vLLM queue near zero and KV cache below 25%, while agent p95 was much higher than vLLM p95. Hypothesis: request-path tracing/export and multi-step agent orchestration, not GPU saturation, were the bottleneck. Changed synchronous Langfuse flush out of the request path. Result: this alone did not help; p95 worsened in the next shakeout, so flush was not the main cause.
+- Saw Phase 5 per-iteration accuracy flat at 36.7%, while long-tail requests often used multiple generate/revise attempts. Hypothesis: extra revise attempts were adding latency without quality gain. Changed `MAX_ITERATIONS` from 3 to 2. Result: quality stayed 11/30 after tuning, and shakeout p95 improved versus the worst run, but still missed the SLO.
+- Saw repeated HTTP 500s with `NoneType.replace` and one 4096-token context error. Hypothesis: schema rendering and context limit were causing avoidable failures under random load-test DBs. Changed schema FK rendering to skip incomplete SQLite FK rows and increased vLLM `--max-model-len` to 6144. Result: HTTP failures dropped sharply in shakeout, but p95 was still above target.
+
+Final 10 RPS, 5-minute run:
+
+- Requested 10 RPS for 300s, 3000 requests.
+- Achieved 8.33 RPS including 60s drain.
+- OK 583, timeouts 1809, client errors 608.
+- p50 100.40s, p95 112.54s, p99 119.80s.
+- vLLM metrics during/after the run showed p95 request latency around 2.5s, max waiting around 12, and KV cache below ~31%, so the final bottleneck is the agent/service layer under backlog rather than raw model execution.
+
+Post-tuning eval:
+
+```bash
+uv run python evals/run_eval.py --out results/eval_after_tuning.json
+```
+
+Quality after tuning stayed at 11/30 correct, or 36.7%. Per-iteration accuracy with the lower cap was 36.7% at both iter 0 and iter 1.
+
+Verdict: SLO missed. The gap is large: achieved 8.33 RPS versus 10+ target, and p95 112.54s versus 5s target. The next fix would be agent-level backpressure/batching or simplifying the verifier path, because the GPU serving layer still had measurable headroom while the FastAPI/LangGraph request layer accumulated long-tail work.

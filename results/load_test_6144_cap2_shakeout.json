@@ -1,0 +1,2120 @@
+{
+  "summary": {
+    "requested_rps": 10.0,
+    "duration_seconds": 30,
+    "wall_clock_seconds": 90.00588637399778,
+    "total_requests": 300,
+    "achieved_rps": 3.333115333739643,
+    "ok": 260,
+    "timeouts": 0,
+    "http_errors": 38,
+    "client_errors": 2,
+    "latency_p50": 2.546080977997917,
+    "latency_p95": 10.978338130997145,
+    "latency_p99": 13.181453921002685,
+    "latency_max": 42.6145719710039,
+    "avg_iterations": 1.323076923076923
+  },
+  "results": [
+    {
+      "latency_seconds": 0.009100216004299,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 0.005206718997214921,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 0.004753271001391113,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 0.005957303001196124,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 0.004367801004264038,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 2.3117859459962347,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 2.8720702360005816,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 3.2760567479999736,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 2.0884711959952256,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 4.08863112799736,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 0.0030477640029857866,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 0.9587371590023395,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 2.5595095030002994,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 2.0637165090010967,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 2.863535573997069,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 3.0672654020017944,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 3.688450945999648,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 3.112545880001562,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 0.017617707002500538,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 2.3509784410052816,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 2.1627344580047065,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 4.49359282200021,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.1848521170031745,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 0.9853329739999026,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 0.004044396999233868,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 3.3065144729989697,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.5146853590049432,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.6204395319946343,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 4.635839219998161,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.1053990479995264,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 2.930242153001018,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 2.2874684870039346,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 2.914955573003681,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 2.9307341229941812,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 0.8316391480038874,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.3340348650017404,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 4.34387185399828,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 3.8602303830048186,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 5.99582410199946,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.3494907979984418,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.8024124629955622,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 0.005228889000136405,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 6.233274184000038,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 0.00644692599598784,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 6.044485227001132,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 1.2990723600014462,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.6238805530010723,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 2.3357658959939727,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 0.0061911850061733276,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 3.6125249239994446,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 1.128928004996851,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 0.005006527004297823,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 4.215450648996921,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 1.2664744220019202,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 5.92060602499987,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 1.8370722160034347,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 6.353830739004479,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 4.187870160996681,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 1.55919229099527,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.15926938100165,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.8212678819982102,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 0.005326079997757915,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 3.946068067001761,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 6.227208452997729,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 1.2198465059991577,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 2.6522221060004085,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 2.126968755001144,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 0.006256895998376422,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 0.9150261190006859,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 3.4169903370057,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 1.1319320589973358,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.5308500419996562,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.5166189439987647,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 4.583374432004348,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 2.210844185996393,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 1.711039506000816,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 3.121572185998957,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 1.4218872280034702,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.824499530994217,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.7059465950005688,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.9167769289997523,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 5.186816171000828,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 6.587201729002118,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 3.433494400997006,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 1.334811731998343,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.2091924659980577,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 3.9354979900017497,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 3.52328160199977,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 0.8059923840046395,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 0.0070451619976665825,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 2.0170721920003416,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.9890634969997336,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.1394089620007435,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 3.7395818080040044,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 0.005881641001906246,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 1.6424473519946332,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 0.8445746270008385,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.8516816509945784,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 4.168410389000201,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 2.039738389001286,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 3.1198422309971647,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 1.5303544620037428,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 0.006107637003879063,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 2.836998055005097,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 2.2560026579958503,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 2.6564230020012474,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.7687950339968666,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.9936498419992859,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.6062421829992672,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.1065415339980973,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 0.08604661400022451,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 5.090717739003594,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 0.8343567210031324,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.848170059005497,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 2.4827568500040798,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 2.2825608999992255,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 2.09663861199806,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.6801657409960171,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.5085762310045538,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 0.004119693003303837,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 0.8216315739991842,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 0.004271249003068078,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 1.842650421000144,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.198042128002271,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.072109493004973,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 4.238059130999318,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 1.9373821610060986,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 0.8779881070004194,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.7776024590057204,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 9.285242391000793,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 2.3190503970035934,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 1.433376002998557,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.63811794299545,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 3.63986207099515,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 0.6315469930050313,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.3569892200030154,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 0.004724051999801304,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 1.704030346001673,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 0.806751792995783,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 3.852013048999652,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 1.8548938339954475,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 0.003760366998903919,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 2.2802262859986513,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.9113751509939902,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 2.913457157002995,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.2773647530048038,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 0.5775962629995774,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 3.4094365850032773,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 2.3107897480003885,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 2.924833128003229,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 5.724460766999982,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 1.642368382999848,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 2.7957222539989743,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.0058893239984172,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 0.007821683000656776,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 2.3859363309966284,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 4.064285371998267,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 2.373344036001072,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 1.693019373997231,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.4183365350036183,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 3.273414485003741,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 1.188670835996163,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 2.288644028005365,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.5985943589985254,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 2.618598484994436,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 0.2319651990037528,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 0.13258001899521332,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 1.8499748009999166,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 3.07585273499717,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 2.5015156930021476,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 1.2157553880024352,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.0238300540004275,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 7.720215909997933,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 0.01083245799964061,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 1.8314712409992353,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 6.712920530997508,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 0.8403409410020686,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 5.103262024000287,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 1.9360407709973515,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.279908541997429,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.1209573369997088,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.6550491779998993,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.4069859530063695,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 3.91325989899633,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 1.1363389039979666,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 2.836697227998229,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 4.387576367997099,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 0.009065144004125614,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 3.529628939999384,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 0.7232071559992619,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 0.008187673003703821,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 1.3610850100012613,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.4608362400031183,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 0.7027245229983237,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 2.1862527780031087,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 2.3436198080016766,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 4.54410960200039,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 1.5112315000005765,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 4.876907231999212,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 2.223439478999353,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 4.453284833994985,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 3.0802183910054737,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 4.022512619994814,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 2.381805422999605,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 0.5628678790017148,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 4.134425894000742,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 1.4811256160028279,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.28607355299755,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 0.3988708309989306,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 2.546080977997917,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 11.018252959001984,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 3.84720914799982,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 2.4444475909986068,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.518647858996701,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.3094493380049244,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 2.1326488530030474,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 3.268021834002866,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 1.1327399319998221,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.029388361996098,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 3.752110512003128,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 5.132128224002372,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 1.4028305909960181,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 0.37643706900416873,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 4.758938648003095,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 2.7553732380038127,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 2.4753044359968044,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 0.880264587001875,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 1.0789900629970361,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 1.6979591970011825,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.4182336009980645,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 3.818561954998586,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 1.704111072998785,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 8.080545231001452,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 2.0177892050051014,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.727369157000794,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.9016190559996176,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.3120877269975608,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.2168818430000101,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 4.3205883490009,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 1.852417462003359,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 2.4893432280005072,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 4.022041062999051,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 0.7341871239987086,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 3.485051278003084,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 2.6796655819998705,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 1.9911126629958744,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 1.8621758080043946,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 3.013905171006627,
+      "status": "http_error",
+      "error": "HTTP 500: {\"detail\":\"AttributeError: 'NoneType' object has no attribute 'replace'\"}",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 9.810004744002072,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 5.703282300004503,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 6.121641910998733,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 9.420988592006324,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 9.020664153002144,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 5.621411052998155,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 6.92685533400072,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 6.227142536001338,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 5.827275561001443,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 5.027183721002075,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 4.128145773000142,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 4.527884682996955,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 6.42808181700093,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 4.434945169996354,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 4.013123526994605,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 3.075127308999072,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 3.475309567002114,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 3.7052062999937334,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 5.303464970005734,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 9.040765265002847,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 9.713245033999556,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 12.057575255996198,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 7.631285894996836,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 8.048779803000798,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 12.051304937995155,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 7.85437441799877,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 8.361140199995134,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 10.86119420400064,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 8.664302791003138,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 9.767631324000831,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 10.978338130997145,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 9.078586667004856,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 7.982596224996087,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 10.78625920000195,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 13.925149737005995,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 13.181453921002685,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 10.684522221003135,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 11.191423570999177,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 9.019449151004665,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 11.019939270998293,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 12.166918123002688,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 9.224972063995665,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 9.069161978004558,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 11.591506500000833,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 11.071231269997952,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 10.627369690002524,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 9.361637349000375,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 11.098056322000048,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 28.945119925992913,
+      "status": "ok",
+      "error": null,
+      "agent_ok": false,
+      "iterations": 2
+    },
+    {
+      "latency_seconds": 42.6145719710039,
+      "status": "ok",
+      "error": null,
+      "agent_ok": true,
+      "iterations": 1
+    },
+    {
+      "latency_seconds": 74.60616628499702,
+      "status": "client_error",
+      "error": "ServerDisconnectedError: Server disconnected",
+      "agent_ok": null,
+      "iterations": null
+    },
+    {
+      "latency_seconds": 68.50549418199807,
+      "status": "client_error",
+      "error": "ServerDisconnectedError: Server disconnected",
+      "agent_ok": null,
+      "iterations": null
+    }
+  ]
+}

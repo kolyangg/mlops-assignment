@@ -58,14 +58,15 @@ def health() -> dict[str, str]:
 @app.post("/answer", response_model=AnswerResponse)
 def answer(req: AnswerRequest) -> AnswerResponse:
     state = AgentState(question=req.question, db_id=req.db)
+    phase = req.tags.get("phase", "manual")
     metadata = {
-        "phase": "phase4",
+        "phase": phase,
         "db": req.db,
-        "question": req.question,
+        "question_preview": req.question[:180],
         **req.tags,
     }
     tags = [
-        "phase:4",
+        f"phase:{phase}",
         f"db:{req.db}",
         *(f"{k}:{v}" for k, v in sorted(req.tags.items())),
     ]
@@ -77,8 +78,6 @@ def answer(req: AnswerRequest) -> AnswerResponse:
     }
     try:
         final = graph.invoke(state, config=config)
-        if _lf_client is not None:
-            _lf_client.flush()
     except Exception as e:  # noqa: BLE001
         raise HTTPException(status_code=500, detail=f"{type(e).__name__}: {e}")
 

@@ -12,7 +12,7 @@ if [[ -f .env ]]; then
 fi
 
 MODEL="${VLLM_MODEL:-Qwen/Qwen3-30B-A3B-Instruct-2507}"
-MAX_MODEL_LEN="${VLLM_MAX_MODEL_LEN:-4096}"
+MAX_MODEL_LEN="${VLLM_MAX_MODEL_LEN:-6144}"
 GPU_MEMORY_UTILIZATION="${VLLM_GPU_MEMORY_UTILIZATION:-0.90}"
 
 exec uv run python -m vllm.entrypoints.openai.api_server \

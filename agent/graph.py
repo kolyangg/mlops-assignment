@@ -31,7 +31,7 @@ from agent.schema import render_schema
 
 # Total generate + revise calls before the loop is forced to stop.
 # 3-5 is a reasonable range; tune it as part of Phase 3.
-MAX_ITERATIONS = 3
+MAX_ITERATIONS = 2
 
 VLLM_BASE_URL = os.environ.get("VLLM_BASE_URL", "http://localhost:8000/v1")
 VLLM_MODEL = os.environ.get("VLLM_MODEL", "Qwen/Qwen3-30B-A3B-Instruct-2507")
@@ -72,12 +72,13 @@ def _attach_schema(state: AgentState) -> dict:
     return {"schema": render_schema(state.db_id)}
 
 
-def _extract_sql(text: str) -> str:
+def _extract_sql(text: Any) -> str:
     """Pull a SQL statement out of an LLM reply, stripping markdown fences/prose.
 
     Intentionally simple: take the first ```sql ... ``` block if there is one,
     otherwise the whole reply. You may need to harden this for your prompts.
     """
+    text = "" if text is None else str(text)
     text = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL | re.IGNORECASE)
     fenced = re.search(r"```(?:sql)?\s*(.*?)```", text, re.DOTALL | re.IGNORECASE)
     sql = (fenced.group(1) if fenced else text).strip()
@@ -87,8 +88,9 @@ def _extract_sql(text: str) -> str:
     return sql.rstrip("` \n")
 
 
-def _extract_json_object(text: str) -> dict[str, Any]:
+def _extract_json_object(text: Any) -> dict[str, Any]:
     """Parse a small JSON object from model output."""
+    text = "" if text is None else str(text)
     text = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL | re.IGNORECASE)
     fenced = re.search(r"```(?:json)?\s*(.*?)```", text, re.DOTALL | re.IGNORECASE)
     candidate = fenced.group(1) if fenced else text
