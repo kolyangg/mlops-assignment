@@ -2,7 +2,7 @@
 
 ## Phase 1: vLLM serving
 
-### Initial serving configuration
+### Serving configuration
 
 Model: `Qwen/Qwen3-30B-A3B-Instruct-2507`
 
@@ -14,7 +14,7 @@ uv run python -m vllm.entrypoints.openai.api_server \
   --host 0.0.0.0 \
   --port 8000 \
   --dtype bfloat16 \
-  --max-model-len 4096 \
+  --max-model-len 6144 \
   --gpu-memory-utilization 0.90 \
   --enable-prefix-caching
 ```
@@ -22,7 +22,7 @@ uv run python -m vllm.entrypoints.openai.api_server \
 Flag notes:
 
 - `--dtype bfloat16`: native H100-friendly precision, avoids unnecessary fp32 memory use.
-- `--max-model-len 4096`: fits the expected 1.5-3K token text-to-SQL prompts while reserving room for short SQL outputs.
+- `--max-model-len 6144`: the initial 4096-token limit fit most eval prompts, but load testing found one schema-heavy request that exceeded it; 6144 kept those prompts in-range without filling the H100 KV cache.
 - `--gpu-memory-utilization 0.90`: leaves some headroom on the 80 GB H100 for runtime overhead while giving vLLM most memory for weights and KV cache.
 - `--enable-prefix-caching`: useful for this workload because repeated requests share instruction and schema prefixes.
 
@@ -40,14 +40,7 @@ Manual requests against the first five rows in `evals/eval_set.jsonl` returned e
 - `superhero`: joined `superhero`, `hero_power`, and `superpower` for Ajax powers.
 - `california_schools`: joined `schools` and `frpm`, ordered by `"Enrollment (Ages 5-17)"`, and limited to five rows.
 
-The fourth and fifth queries executed but returned empty/null results due to likely schema/value interpretation mistakes. These are good candidates for Phase 3 verifier/reviser testing.
-
-### Screenshot TODO
-
-Capture `screenshots/vllm_manual_query.png` showing:
-
-- vLLM running on port `8000`.
-- One manual `/v1/chat/completions` request returning SQL.
+The fourth and fifth queries executed but returned empty/null results due to likely schema/value interpretation mistakes. These were useful candidates for the verifier/reviser loop.
 
 ## Phase 5: baseline eval
 
@@ -68,6 +61,10 @@ Per-iteration accuracy:
 Latency from the eval runner: p50 0.56s, p95 2.05s, p99 2.92s.
 
 Read: the current verify/revise loop triggers on several questions, but it did not improve execution accuracy on this baseline run. The verifier catches obvious empty/null failures, but the reviser often repeats the same SQL instead of making a semantically useful correction.
+
+## Agent value
+
+The loop adds observability and guardrails, but did not improve measured execution accuracy on this eval set. The evidence is the per-iteration pass rate: baseline accuracy was 36.7% at `iter_0`, 36.7% at `iter_1`, and 36.7% at `iter_2`; after tuning the cap to two attempts, it was still 36.7% at both `iter_0` and `iter_1`. The verifier is still valuable operationally because it marks empty/null aggregate failures and exposes the failure path in Langfuse, but the reviser prompt/model combination is not yet strong enough to turn those detected failures into better SQL.
 
 ## Phase 6: load/SLO iteration
 
@@ -103,3 +100,7 @@ uv run python evals/run_eval.py --out results/eval_after_tuning.json
 Quality after tuning stayed at 11/30 correct, or 36.7%. Per-iteration accuracy with the lower cap was 36.7% at both iter 0 and iter 1.
 
 Verdict: SLO missed. The gap is large: achieved 8.33 RPS versus 10+ target, and p95 112.54s versus 5s target. The next fix would be agent-level backpressure/batching or simplifying the verifier path, because the GPU serving layer still had measurable headroom while the FastAPI/LangGraph request layer accumulated long-tail work.
+
+## With more time
+
+I would first make the verifier cheaper and more selective: skip the extra LLM verifier call when SQL executes and returns a non-empty result for straightforward lookup questions, and reserve verification for aggregates, empty results, or SQL execution errors. Second, I would add request backpressure with a bounded FastAPI queue so the system returns fast 429/503 responses instead of letting requests sit until the client times out; that would make the SLO failure explicit and protect successful latency. Third, I would improve the revision prompt with concrete execution evidence such as row counts, null aggregate diagnostics, and limited schema/value samples, then re-run the eval to prove that revise attempts actually move accuracy above the first draft. Finally, I would split the load metric by agent node so Grafana can show generate, execute, verify, and revise timing separately rather than relying on trace inspection for that diagnosis.
