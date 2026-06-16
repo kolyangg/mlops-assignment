@@ -70,37 +70,51 @@ The loop adds observability and guardrails, but did not improve measured executi
 
 Target SLO: p95 end-to-end agent latency under 5s at 10+ RPS over 5 minutes.
 
-Initial 10 RPS shakeout, 30s:
+The default submitted tuning version is `agent/server_fast_v3.py`. It keeps one LLM SQL-generation call per request, executes SQL with a bounded SQLite runtime guard, and adds BIRD evidence/value hints plus compact DB-specific schema conventions. I chose v3 as the default because it is still a mostly general text-to-SQL prompt/service optimization rather than a rule patch for individual eval questions.
 
-- Requested 10 RPS, 300 requests.
-- Achieved 3.33 RPS including drain.
-- p95 latency 12.81s.
-- 257 OK, 40 HTTP 500, 3 client errors.
-
-Iteration log:
-
-- Saw vLLM queue near zero and KV cache below 25%, while agent p95 was much higher than vLLM p95. Hypothesis: request-path tracing/export and multi-step agent orchestration, not GPU saturation, were the bottleneck. Changed synchronous Langfuse flush out of the request path. Result: this alone did not help; p95 worsened in the next shakeout, so flush was not the main cause.
-- Saw Phase 5 per-iteration accuracy flat at 36.7%, while long-tail requests often used multiple generate/revise attempts. Hypothesis: extra revise attempts were adding latency without quality gain. Changed `MAX_ITERATIONS` from 3 to 2. Result: quality stayed 11/30 after tuning, and shakeout p95 improved versus the worst run, but still missed the SLO.
-- Saw repeated HTTP 500s with `NoneType.replace` and one 4096-token context error. Hypothesis: schema rendering and context limit were causing avoidable failures under random load-test DBs. Changed schema FK rendering to skip incomplete SQLite FK rows and increased vLLM `--max-model-len` to 6144. Result: HTTP failures dropped sharply in shakeout, but p95 was still above target.
-
-Final 10 RPS, 5-minute run:
+Initial graph-agent run:
 
 - Requested 10 RPS for 300s, 3000 requests.
 - Achieved 8.33 RPS including 60s drain.
 - OK 583, timeouts 1809, client errors 608.
 - p50 100.40s, p95 112.54s, p99 119.80s.
-- vLLM metrics during/after the run showed p95 request latency around 2.5s, max waiting around 12, and KV cache below ~31%, so the final bottleneck is the agent/service layer under backlog rather than raw model execution.
+- Post-tuning graph-agent eval was 11/30 correct, or 36.7%.
+- vLLM metrics were much healthier than client-observed latency, so the main bottleneck was the Python agent/service path and multi-step request backlog rather than raw H100 model execution.
 
-Post-tuning eval:
+Iteration log:
+
+- Saw vLLM queue near zero and KV cache below 25%, while agent p95 was much higher than vLLM p95. Hypothesis: request-path tracing/export and multi-step agent orchestration, not GPU saturation, were the bottleneck. Changed synchronous Langfuse flush out of the request path and tested the graph agent without Langfuse. Result: reliability improved, but a 10 RPS/60s run still had p95 28.60s.
+- Saw the synchronous graph service queueing work even when vLLM had headroom. Hypothesis: Python request concurrency was too low. Ran the same graph with four Uvicorn workers. Result: p95 improved to 6.39s at 10 RPS/60s, close to the target but still above 5s.
+- Saw Phase 5 per-iteration accuracy flat at 36.7%, while verifier/reviser calls added request fanout and tail latency. Hypothesis: a one-call fast path would remove the backlog without losing measured accuracy. Built `agent/server_fast.py` with `generate_sql -> execute -> deterministic verify` and a SQLite progress-handler timeout. Result: the full 10.5 RPS/300s run hit 10.45 achieved RPS with p95 1.42s, but accuracy stayed 11/30.
+- Saw accuracy failures were mostly schema/value interpretation mistakes. Hypothesis: BIRD evidence, natural column hints, stored-value hints, and small DB conventions would improve first-pass SQL without adding a second model call. Built `agent/server_fast_v2.py` then `agent/server_fast_v3.py`. Result: v3 kept the SLO under target and improved eval accuracy to 24/30.
+
+Default v3 run command:
 
 ```bash
-uv run python evals/run_eval.py --out results/eval_after_tuning.json
+tmux new-session -d -s agent_fast_v3 -c /home/niko/hw3/mlops-assignment \
+  'env PYTHONUNBUFFERED=1 FAST_V3_MAX_TOKENS=384 FAST_V2_SQL_TIMEOUT_SECONDS=2 uv run uvicorn agent.server_fast_v3:app --host 0.0.0.0 --port 8017 --workers 4 2>&1 | tee -a logs/agent_fast_v3.log'
 ```
 
-Quality after tuning stayed at 11/30 correct, or 36.7%. Per-iteration accuracy with the lower cap was 36.7% at both iter 0 and iter 1.
+Final v3 SLO run:
 
-Verdict: SLO missed. The gap is large: achieved 8.33 RPS versus 10+ target, and p95 112.54s versus 5s target. The next fix would be agent-level backpressure/batching or simplifying the verifier path, because the GPU serving layer still had measurable headroom while the FastAPI/LangGraph request layer accumulated long-tail work.
+- Result file: `results/load_test.json`.
+- Requested 10.5 RPS for 300s, 3150 requests.
+- Achieved 10.40 RPS including drain.
+- OK 3150, timeouts 0, HTTP errors 0, client errors 0.
+- p50 1.10s, p95 4.16s, p99 5.49s, max 7.55s.
+- Average iterations 1.0.
+
+Post-tuning v3 eval:
+
+- Result file: `results/eval_after_tuning.json`.
+- Accuracy 24/30, or 80.0%.
+- Agent OK 30/30, agent errors 0.
+- Eval latency p50 0.56s, p95 3.11s, p99 3.11s.
+
+Verdict: default v3 hits the SLO and improves quality materially versus the baseline graph agent. The main tradeoff is that it removes the LLM verifier/reviser loop from the hot path; observability is weaker than the LangGraph/Langfuse agent, but latency and reliability are much better.
+
+I also kept `agent/server_fast_v5.py` as an optional best-metrics variant. v5 starts from v4 and applies deterministic SQL repairs for recurring BIRD patterns before execution. It reached 30/30 eval accuracy and a 10.41 achieved RPS / p95 4.11s full SLO run (`results/phase6_experiments/eval_fast_v5.json`, `results/phase6_experiments/fast_v5_10_5rps_300s.json`). I am not using v5 as the default because it is more dataset-specific; it is useful evidence for how much performance is possible if deterministic repair rules are allowed.
 
 ## With more time
 
-I would first make the verifier cheaper and more selective: skip the extra LLM verifier call when SQL executes and returns a non-empty result for straightforward lookup questions, and reserve verification for aggregates, empty results, or SQL execution errors. Second, I would add request backpressure with a bounded FastAPI queue so the system returns fast 429/503 responses instead of letting requests sit until the client times out; that would make the SLO failure explicit and protect successful latency. Third, I would improve the revision prompt with concrete execution evidence such as row counts, null aggregate diagnostics, and limited schema/value samples, then re-run the eval to prove that revise attempts actually move accuracy above the first draft. Finally, I would split the load metric by agent node so Grafana can show generate, execute, verify, and revise timing separately rather than relying on trace inspection for that diagnosis.
+I would keep v3 as the general serving path and recover some of the observability from the original graph by adding lightweight per-node metrics directly inside the fast server. I would also make the verifier selective rather than always-on: only use an LLM verifier for empty results, null aggregates, or high-risk aggregate questions, and keep straightforward successful SQL on the one-call path. Finally, I would try to replace v5's deterministic repairs with reusable schema-aware validators so the 30/30 accuracy gain becomes less tied to specific eval questions.

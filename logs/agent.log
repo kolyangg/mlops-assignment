@@ -40,3 +40,80 @@ INFO:     160.119.71.12:38518 - "POST /api HTTP/1.1" 404 Not Found
 INFO:     160.119.71.12:38532 - "POST /_next/server HTTP/1.1" 404 Not Found
 INFO:     160.119.71.12:38546 - "POST /app HTTP/1.1" 404 Not Found
 INFO:     160.119.71.12:38556 - "POST /api/route HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:38664 - "GET /health HTTP/1.1" 200 OK
+INFO:     18.97.5.118:59160 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     104.243.32.235:54372 - "GET / HTTP/1.1" 404 Not Found
+INFO:     104.243.32.235:54372 - "GET /v1/models HTTP/1.1" 404 Not Found
+INFO:     104.243.32.235:54374 - "GET /api/tags HTTP/1.1" 404 Not Found
+INFO:     104.243.32.235:54372 - "GET /api/version HTTP/1.1" 404 Not Found
+INFO:     104.243.32.235:54372 - "GET /queue/status HTTP/1.1" 404 Not Found
+INFO:     104.243.32.235:54372 - "GET /metrics HTTP/1.1" 404 Not Found
+INFO:     104.243.32.235:54372 - "GET /.well-known/mcp.json HTTP/1.1" 404 Not Found
+INFO:     104.243.32.235:54372 - "GET /.well-known/agent.json HTTP/1.1" 404 Not Found
+INFO:     104.243.32.235:54372 - "GET /health HTTP/1.1" 200 OK
+INFO:     104.243.32.235:54372 - "GET /docs HTTP/1.1" 200 OK
+INFO:     104.243.32.235:54372 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     104.243.32.235:54374 - "GET /v1/chat/completions HTTP/1.1" 404 Not Found
+INFO:     104.243.32.235:54372 - "GET /api/generate HTTP/1.1" 404 Not Found
+INFO:     104.243.32.235:54372 - "GET /collections HTTP/1.1" 404 Not Found
+INFO:     104.243.32.235:54372 - "GET /api/v1/collections HTTP/1.1" 404 Not Found
+INFO:     104.243.32.235:54372 - "GET /v1/schema HTTP/1.1" 404 Not Found
+INFO:     104.243.32.235:54372 - "GET /config HTTP/1.1" 404 Not Found
+INFO:     104.243.32.235:54374 - "GET /api/2.0/mlflow/experiments/list HTTP/1.1" 404 Not Found
+INFO:     104.243.32.235:54372 - "GET /.well-known/ai-plugin.json HTTP/1.1" 404 Not Found
+INFO:     104.243.32.235:54384 - "GET /api/v1/version HTTP/1.1" 404 Not Found
+INFO:     104.243.32.235:54388 - "GET /api/kernels HTTP/1.1" 404 Not Found
+INFO:     104.243.32.235:54398 - "GET /sse HTTP/1.1" 404 Not Found
+INFO:     104.243.32.235:54372 - "GET /api/flows HTTP/1.1" 404 Not Found
+INFO:     104.243.32.235:54372 - "GET /rest/workflows HTTP/1.1" 404 Not Found
+INFO:     104.243.32.235:54372 - "GET /api/agents HTTP/1.1" 404 Not Found
+INFO:     104.243.32.235:54372 - "GET /inference HTTP/1.1" 404 Not Found
+INFO:     104.243.32.235:54372 - "GET /predict HTTP/1.1" 404 Not Found
+INFO:     104.243.32.235:54372 - "GET /embed HTTP/1.1" 404 Not Found
+INFO:     104.243.32.235:54372 - "GET /api/v1/status HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:42696 - "GET /health HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     66.132.195.60:7014 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     66.132.195.60:39902 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     66.132.195.60:12652 - "POST /mcp HTTP/1.1" 404 Not Found
+INFO:     66.132.195.60:12656 - "POST /jsonrpc HTTP/1.1" 404 Not Found
+INFO:     66.132.195.60:12668 - "POST / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     66.132.195.60:20656 - "GET /login HTTP/1.1" 404 Not Found
+INFO:     44.220.188.136:43084 - "GET / HTTP/1.1" 404 Not Found
+INFO:     119.96.198.83:56127 - "GET / HTTP/1.0" 404 Not Found
+INFO:     44.220.185.218:35714 - "GET / HTTP/1.1" 404 Not Found
+INFO:     44.220.188.21:50148 - "GET / HTTP/1.1" 404 Not Found
